@@ -1,0 +1,194 @@
+{
+  "students": [
+    {
+      "username": "Ahmed",
+      "email": "  ",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "username": "Kareem",
+      "email": "kareem@gamil.com",
+      "password": "1234",
+      "subjects": [
+        {
+          "name": "programmer",
+          "id": "2",
+          "degree": 2
+        },
+        {
+          "name": "math",
+          "id": "1",
+          "degree": 1
+        },
+        {
+          "name": "programmer",
+          "id": "2",
+          "degree": 0
+        }
+      ],
+      "id": 2
+    },
+    {
+      "username": "kareem",
+      "email": "kareem@gmail.com",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "username": "kareem",
+      "email": "kareem@gmail.comm",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "username": "kareemm",
+      "email": "kareem@gmail.commm",
+      "password": "111",
+      "id": 5
+    },
+    {
+      "username": "Ali",
+      "email": "ali.test@gmail.com",
+      "password": "123456",
+      "subjects": [
+        {
+          "name": "math",
+          "id": "1",
+          "degree": 0
+        },
+        {
+          "name": "programmer",
+          "id": "2",
+          "degree": 1
+        }
+      ],
+      "id": 6
+    },
+    {
+      "username": "Ali",
+      "email": "ali.test@gmail.com",
+      "password": "123456",
+      "id": 7
+    },
+    {
+      "username": "alamm",
+      "email": "alamm@gmail.com",
+      "password": "123456",
+      "subjects": [
+        {
+          "name": "math",
+          "id": "1",
+          "degree": 1
+        },
+        {
+          "name": "programmer",
+          "id": "2",
+          "degree": 1
+        }
+      ],
+      "id": 8
+    },
+    {
+      "username": "abramm",
+      "email": "abramm@gmail.com",
+      "password": "1234",
+      "subjects": [
+        {
+          "name": "math",
+          "id": "1",
+          "degree": 0
+        }
+      ],
+      "id": 9
+    },
+    {
+      "username": "ahmed",
+      "email": "ahmed.saad@gamilcom",
+      "password": "123",
+      "id": 10
+    }
+  ],
+  "doctor": [
+    {
+      "username": "admin",
+      "email": "admin@gamil.com",
+      "password": "123456",
+      "id": 1
+    }
+  ],
+  "sub": [
+    {
+      "name": "math",
+      "AllQen": [
+        {
+          "qeun": "2*8",
+          "anser1": "16",
+          "anser2": "5",
+          "anser3": "8",
+          "anser4": "7",
+          "corrdAnser": "16"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "programmer",
+      "AllQen": [
+        {
+          "qeun": "c++",
+          "anser1": "8",
+          "anser2": "7",
+          "anser3": "9",
+          "anser4": "2",
+          "corrdAnser": "8"
+        },
+        {
+          "qeun": "c#",
+          "anser1": "4",
+          "anser2": "2",
+          "anser3": "1",
+          "anser4": "3",
+          "corrdAnser": "4"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "rr",
+      "AllQen": [
+        {
+          "qeun": "rr",
+          "anser1": "rr",
+          "anser2": "rr",
+          "anser3": "rr",
+          "anser4": "rr",
+          "corrdAnser": "rr"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "name": "ww",
+      "AllQen": [
+        {
+          "qeun": "ww",
+          "anser1": "ee",
+          "anser2": "ee",
+          "anser3": "ee",
+          "anser4": "ere",
+          "corrdAnser": "ee"
+        }
+      ],
+      "id": 4
+    }
+  ],
+  "login": [
+    {
+      "username": "ahmed",
+      "role": "students",
+      "userid": 10,
+      "id": 1
+    }
+  ]
+}

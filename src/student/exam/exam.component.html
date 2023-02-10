@@ -1,0 +1,38 @@
+<div class="examBox">
+    <div class="examhead text-center"><h2>اختبار {{subDetalis?.name}}</h2></div>
+    <div class="quizBox" *ngFor="let item of subDetalis?.AllQen;let index=index " >
+        <strong ><span class="text-danger"> {{1 + index}})</span> {{item.qeun}}</strong>
+        <div class="row mt-3" >
+            <div class="col-md-6 col-sm-12">
+                <mat-radio-button name="{{index}}" (change)="getAnser($event)" value="{{item.anser1}}" *ngIf="userLogin?.role == 'students' && !showRes && validExam" color="warn"></mat-radio-button>
+                <label>A: {{item.anser1}}</label>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <mat-radio-button name="{{index}}" (change)="getAnser($event)" value="{{item.anser2}}"  *ngIf="userLogin?.role == 'students' && !showRes && validExam" color="warn"></mat-radio-button>
+                <label>B: {{item.anser2}}</label>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <mat-radio-button name="{{index}}" (change)="getAnser($event)" value="{{item.anser3}}"  *ngIf="userLogin?.role == 'students' && !showRes && validExam"  color="warn"></mat-radio-button>
+                <label>C: {{item.anser3}}</label>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <mat-radio-button name="{{index}}" (change)="getAnser($event)"  value="{{item.anser4}}"  *ngIf="userLogin?.role == 'students' && !showRes && validExam"  color="warn"></mat-radio-button>
+                <label>D: {{item.anser4}}</label>
+            </div>
+        </div>
+        <div class="text-start" *ngIf="userLogin?.role == 'doctor'">
+            <button mat-raised-button  class="btn btn-danger"  (click)="delet(index)"  >حذف</button>
+        </div>
+
+        <hr>
+    </div>
+    <div class="text-center" *ngIf="userLogin?.role == 'students'">
+        <span  class="fs-4 text-success">  </span>
+        <span *ngIf="showRes || !validExam" class="fs-4 text-success"> {{total}} / {{subDetalis?.AllQen.length}} النتيجة</span>
+        <button *ngIf="!showRes && validExam" class="btn btn-success px-5 fs-5" (click)="getRes()"> النتيجة</button>
+    </div>
+
+</div>

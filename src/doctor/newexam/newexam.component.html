@@ -1,0 +1,103 @@
+
+  <div class="new-exam">
+    <mat-horizontal-stepper linear #stepper [selectedIndex]="stepperIndex" >
+        <mat-step label="اسم المادة" [completed]="startAdd" >
+            <div class="AddSubject">
+                <div>اسم المادة : </div>
+                <mat-form-field appearance="fill" color="warn">
+                    <mat-label>اسم المادة</mat-label>
+                    <input matInput type="text"[formControl]="name" >
+                </mat-form-field>
+                <button color="warn"  mat-raised-button matStepperNext (click)="start()" >ابدأ</button>
+            </div>
+
+        </mat-step>
+        <mat-step label="اسئلة {{subName}}" [completed]="previwe">
+            <div class="question">
+                <form [formGroup]="qeuForm">
+                    <mat-form-field appearance="outline" color="warn" class="queiz">
+                        <mat-label>السؤال</mat-label>
+                        <input matInput type="text"  formControlName="qeu" >
+                    </mat-form-field>
+
+                <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                        <mat-radio-button value="anser1" (change)="getcorred($event)"   color="warn"></mat-radio-button>
+                            <mat-form-field color="warn">
+                                <mat-label>أجابة A</mat-label>
+                                <input matInput type="text" formControlName="anser1"  >
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12">
+                        <mat-radio-button value="anser2"  (change)="getcorred($event)"   color="warn"></mat-radio-button>
+                            <mat-form-field color="warn">
+                                <mat-label>أجابة B</mat-label>
+                                <input matInput type="text" formControlName="anser2" >
+                            </mat-form-field>
+                        
+                        </div>
+
+                        <div class="col-md-6 col-sm-12">
+                        <mat-radio-button value="anser3" (change)="getcorred($event)"   color="warn"></mat-radio-button>
+                        <mat-form-field color="warn">
+                                <mat-label>أجابة C</mat-label>
+                                <input matInput type="text"   formControlName="anser3" >
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12">
+                            <mat-radio-button value="anser4" (change)="getcorred($event)"   color="warn"></mat-radio-button>
+                            <mat-form-field color="warn">
+                                <mat-label>أجابة D</mat-label>
+                                <input matInput type="text" formControlName="anser4"  >
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="questBtn">
+                        <div>
+                            <button mat-raised-button class="btn btn-success" matStepperNext (click)="sub()" disabled="{{qeus.length ? false : true}}">{{previwe ? 'عرض' : 'انتهاء'}}  </button>
+                            <button mat-raised-button color="warn" matStepperPrevious (click)="cancel()"  >الغاء</button>
+                        </div>
+                        <div>
+                            <button mat-raised-button color="accent" (click)="clearform()" >حذف </button>
+                            <button mat-raised-button color="primary" [disabled]="qeuForm.invalid" (click)="creatqeun()">حفظ</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </mat-step>
+        <mat-step label="عرض الاختبار" >
+            <div class="examBox">
+                <div class="examhead text-center"><h2>{{subName}}</h2></div>
+                <div class="quizBox" *ngFor="let item of qeus; let index = index">
+                    <strong><span class="text-danger"></span> Qeun: {{item.qeun}}</strong>
+                    <div class="row" dir="rtl">
+                        <div class="col-sm-12">
+                            {{item.anser1}}
+                        </div>
+                        <div class="col-sm-12">
+                            {{item.anser2}}
+                        </div>
+                        <div class="col-sm-12">
+                            {{item.anser3}}
+
+                        </div>
+                        <div class="col-sm-12">
+                            {{item.anser4}}
+
+                        </div>
+                        <div class="col-sm-12">
+                            <span class="text-success"> الاجابة الصحيحة:{{item.corrdAnser}}</span>
+                        </div>
+                    </div>
+                    <div class="text-start">
+                        <button mat-raised-button  class="btn btn-danger" (click)="delet(index)" >حذف</button>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </mat-step>
+    </mat-horizontal-stepper>
+  </div>

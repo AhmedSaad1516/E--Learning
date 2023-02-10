@@ -1,0 +1,305 @@
+<!-- <form  [formGroup]="LoginUserForm">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+ 
+  <button (click)="Submit()" type="submit" class="btn btn-primary" >Submit</button>
+
+  <div class="form-check" (change)="getRole($event)" formControlName="type" >
+    <input  class="form-check-input" type="radio" id="exampleRadios3" value="students" >
+    <label class="form-check-label" for="exampleRadios3">
+      students   </label>
+
+      <div>
+
+        <input class="form-check-input" type="radio" id="exampleRadios3" value="doctor" >
+        <label class="form-check-label" for="exampleRadios3">
+  doctor      </label>
+   
+      </div>
+  </div>
+  
+
+</form> -->
+
+
+
+<!-- <form class="w-50" style="margin-left: 450px; margin-top: 80px;"  [formGroup]="LoginUserForm">
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input formControlName="email" type="email" class="form-control" id="inputEmail3">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input formControlName="password" type="password" class="form-control" id="inputPassword3">
+    </div>
+  </div>
+
+   <fieldset  class="form-group row" >
+    <legend class="col-form-label col-sm-2 float-sm-left pt-0">Radios</legend>
+    <div   class="col-sm-10">
+      <div  class="form-check">
+        <input (change)="getRole($event)" formControlName="type" class="form-check-input" value="students"  type="radio">
+
+        <label class="form-check-label"  value="students"  >
+          students
+        </label>
+        <div  class="form-check">
+          <input (change)="getRole($event)" formControlName="type" class="form-check-input" value="doctor" type="radio"  >
+  
+          <label  value="doctor" class="form-check-label" >
+            doctor
+          </label>
+       
+        </div>
+      </div>
+     
+    
+    </div>
+  </fieldset> 
+
+
+  <div>Selected Option is </div>
+<mat-radio-group aria-label="Select an option" (change)="getRole($event)" formControlName="type"  >
+    <mat-radio-button value="students" >students</mat-radio-button>
+    <mat-radio-button value="doctor">doctor</mat-radio-button>
+</mat-radio-group>
+  
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" (click)="Submit()" class="btn btn-primary">Sign in</button>
+    </div>
+  </div>
+</form> -->
+
+
+
+
+
+
+
+
+<!-- <style>
+  .gra1 {
+    border: 1px solid #fff;
+    border-radius: 2px;
+}
+.h3 {
+    font-size: 21px;
+}
+
+.h3, .h4 {
+    font-family: erdana,helvetica,arial,sans-serif;
+    color: #610b4b;
+}
+.h1, .h3 {
+    font-weight: 400;
+}
+h1, h2, h3 {
+    line-height: 1.3em;
+}
+.firsthomecontent a {
+    float: left;
+    text-decoration: none;
+}
+
+a {
+    color: green;
+}
+
+.homecontent {
+    transition: all .25s ease-in-out;
+    border: 1px solid #efe8e8;
+    margin: 5px;
+    font-size: 16px;
+    padding: 10px;
+    width: 120px;
+    height: 100px;
+    border-radius: 2px;
+    -webkit-box-shadow: rgb(99 99 99 / 20%) 0 2px 8px 0;
+    -moz-box-shadow: rgba(99,99,99,.2) 0 2px 8px 0;
+    box-shadow: rgb(99 99 99 / 20%) 0 2px 8px 0;
+}
+#innerfooter div, #interview h2, #uh3, .homecontent, #q h2, div.q h2 {
+    text-align: center;
+}
+.homecontent img {
+    margin-bottom: 5px;
+    border-radius: 3px;
+    max-width: 100%;
+    height: 50px;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.homecontent p {
+    margin-top: 0;
+    padding: 0;
+    line-height: 1.4;
+    overflow: hidden;
+    height: 42px;
+    font-size: 14.5px;
+}
+.homecontent {
+    transition: all .25s ease-in-out;
+    border: 1px solid #efe8e8;
+    margin: 5px;
+    font-size: 16px;
+    padding: 10px;
+    width: 120px;
+    height: 100px
+px
+;
+    border-radius: 2px;
+    -webkit-box-shadow: rgb(99 99 99 / 20%) 0 2px 8px 0;
+    -moz-box-shadow: rgba(99,99,99,.2) 0 2px 8px 0;
+    box-shadow: rgb(99 99 99 / 20%) 0 2px 8px 0;
+}
+
+#innerfooter div, #interview h2, #uh3, .homecontent, #q h2, div.q h2 {
+    text-align: center;
+
+}
+.homecontent:hover {
+    -webkit-box-shadow: rgb(100 100 111 / 20%) 0 7px 29px 0;
+    -moz-box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
+    box-shadow: rgb(100 100 111 / 20%) 0 7px 29px 0;
+}
+.homecontent {
+    transition: all .25s ease-in-out;
+    border: 1px
+px
+ solid #efe8e8;
+    margin: 5px;
+    font-size: 16px;
+    padding: 10px;
+    width: 120px;
+    height: 100px;
+    border-radius: 2px;
+    -webkit-box-shadow: rgb(99 99 99 / 20%) 0 2px 8px 0;
+    -moz-box-shadow: rgba(99,99,99,.2) 0 2px 8px 0;
+    box-shadow: rgb(99 99 99 / 20%) 0 2px 8px 0;
+}
+
+#innerfooter div, #interview h2, #uh3, .homecontent, #q h2, div.q h2 {
+    text-align: center;
+}
+.hrhomebox {
+    background-color: #f9f4f4;
+    height: 12px;
+    border: 0;
+    clear: both;
+  
+}
+fieldset {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+}
+.gra1 {
+    border: 1px solid #fff;
+    border-radius: 2px;
+}
+div.onlycontent {
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-right: 4px;
+    width: 58%;
+    float: left;
+    padding: 10px 15px;
+    background-color: #fff;
+}
+</style>
+
+
+<hr class="hrhomebox">
+<div class="onlycontent">
+<fieldset class="gra1">
+  <h2 class="h3">Preparation</h2>
+  <div class="firsthomecontent">
+  <a href="https://www.javatpoint.com/aptitude/quantitative">
+  <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude" src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png">
+  <p>Aptitude</p>
+  </div>
+  </a>
+  <a href="https://www.javatpoint.com/reasoning">
+  <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning" src="https://static.javatpoint.com/reasoning/images/reasoning-home.png">
+  <p>Reasoning</p>
+  </div>
+  </a>
+  <a href="https://www.javatpoint.com/verbal-ability">
+  <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability" src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png">
+  <p>Verbal Ability</p>
+  </div>
+  </a>
+  <a href="https://www.javatpoint.com/interview-questions-and-answers">
+  <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions" src="https://static.javatpoint.com/images/logo/interviewhome.png">
+  <p>Interview Questions</p>
+  </div>
+  </a>
+  <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process">
+  <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions" src="https://static.javatpoint.com/interview/images/company-home.jpeg">
+  <p>Company Questions</p>
+  </div>
+  </a>
+  </div>
+  </fieldset>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+<div class="login">
+  <div class="text-center loginhead">
+      <h2>Login</h2>
+  </div>
+  <form [formGroup]="LoginUserForm">
+      <div class="row">
+          
+          <div class="col-sm-12 mb-3">        
+              <mat-radio-group (change)="getRole($event)" formControlName="type" > 
+                  <mat-radio-button value="students"  class="w-25" color="warn">طالب</mat-radio-button>
+                  <mat-radio-button value="doctor" class="w-25" color="warn">دكتور</mat-radio-button>
+              </mat-radio-group>
+          </div>
+          <div class="col-md-6 col-sm-12">          
+              <mat-form-field appearance="outline" color="warn">                    
+                  <mat-label>الايميل</mat-label>
+                  <input matInput type="email" formControlName="email"  >
+              </mat-form-field>
+          </div>
+
+          <div class="col-md-6 col-sm-12">
+              <mat-form-field appearance="outline" color="warn">
+                  <mat-label>كلمة المرور</mat-label>
+                  <input matInput type="password"  formControlName="password" >
+              </mat-form-field>
+          </div>
+      </div>
+      <div class="text-right loginfoot">
+          <a routerLink="/register" color="primary">انشاء حساب ؟</a>
+          <button mat-raised-button color="warn" (click)="Submit()"  >تسجيل الدخول</button>
+      </div>
+   </form>
+</div>
